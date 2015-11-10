@@ -1,7 +1,6 @@
 package BaseAlg;
 
 import java.util.Iterator;
-
 import static java.lang.System.out;
 
 public class LinkList<Item> implements Iterable<Item>{
