@@ -1,6 +1,11 @@
 package SimpleSort;
 
+import BaseAlg.*;
+
 import java.util.*;
+import java.util.Queue;
+import java.util.regex.Matcher;
+
 import static java.lang.System.out;
 
 public class Sort {
@@ -12,10 +17,9 @@ public class Sort {
 
     /**
      * 冒泡排序算法
-     * @param arr 要排序的算
-     * @param <T> 泛型参数，但该类需要继承Comparable
+     * @param arr 要排序的数组
      */
-    public static <T extends Comparable> void bubbleSort(T [] arr) {
+    public static  void bubbleSort(Comparable [] arr) {
         int N = arr.length;
         boolean flag = false;
 
@@ -61,9 +65,9 @@ public class Sort {
      * 插入排序
      * @param arr 要排序的数组
      */
-    public static <T extends  Comparable> void insertSort(T [] arr) {
+    public static void insertSort(Comparable [] arr) {
         for (int i = 1; i < arr.length; ++i) {
-            T key = arr[i];
+            Comparable key = arr[i];
             int j = i - 1;
             while (j >= 0 && arr[j].compareTo(key) > 0) {
                 arr[j+1] = arr[j];
@@ -91,15 +95,40 @@ public class Sort {
         }
     }
 
+
     /**
      * 希尔排序
      * @param arr 要排序的数组
      */
-    public static <T extends Comparable> void shellSort(T [] arr) {
+    public static  void shellSort(Comparable [] arr) {
+        int N = arr.length;
+        int k = 1, hibb;
 
+        // 逆序求出Hibbard增量序列
+        List<Integer> gaps = new ArrayList<>();
+        while(true) {
+            hibb = (int)(Math.pow(2, k) - 1);
+            if (hibb > N) break;
+            gaps.add(hibb);
+            ++k;
+        }
+
+        for (k = gaps.size()-1; k >= 0; --k) {
+            int gap = gaps.get(k);
+            for (int i = gap; i < N; ++i) {
+                Comparable key = arr[i];
+                int j = i;
+                while (j >= gap && arr[j-gap].compareTo(key) >= 0) {
+                    swap(arr, j, j - gap);
+                    j -= gap;
+                }
+                arr[j] = key;
+            }
+        }
     }
 
-    public static int time(String alg) {
+
+    public static double time(String alg) {
 
         Double [] arr = new Double[100000];
         for (int i = 0; i < arr.length; ++i)
@@ -107,10 +136,12 @@ public class Sort {
 
         long callTime = System.currentTimeMillis();
         if (alg.equals("bubbleSort")) bubbleSort(arr);
-        if (alg.equals("insertSort")) insertSort(arr);
+        else if (alg.equals("insertSort")) insertSort(arr);
+        else if (alg.equals("shellSort")) shellSort(arr);
         callTime = System.currentTimeMillis() - callTime;
-        return (int)callTime/1000;
+        return callTime*1.0/1000;
     }
+
 
     public static void main(String [] args) {
         Integer [] arr = new Integer[10];
@@ -121,9 +152,12 @@ public class Sort {
         insertSort(arr, new Comparator<Integer>() {
             @Override
             public int compare(Integer a, Integer b) {
-                return Integer.compare(b, a);
+                return Integer.compare(a, b);
             }
         });
         out.println(Arrays.toString(arr));
+
+
+
     }
 }
