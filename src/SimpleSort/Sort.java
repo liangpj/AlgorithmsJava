@@ -1,11 +1,7 @@
 package SimpleSort;
 
-import BaseAlg.*;
 
 import java.util.*;
-import java.util.Queue;
-import java.util.regex.Matcher;
-
 import static java.lang.System.out;
 
 public class Sort {
@@ -156,8 +152,10 @@ public class Sort {
             }
         });
         out.println(Arrays.toString(arr));
-
-
+        //随进产生100000个元素，三种排序算法的运行时间为
+        out.println("shell sort : " + time("shellSort") + "s");
+        out.println("insert sort : " + time("insertSort") + "s");
+        out.println("bubble sort: " + time("bubbleSort") + "s");
 
     }
 }
