@@ -132,9 +132,17 @@ public class SimpleSort {
             arr[i] = Math.random();
 
         long callTime = System.currentTimeMillis();
-        if (alg.equals("bubbleSort")) bubbleSort(arr);
-        else if (alg.equals("insertSort")) insertSort(arr);
-        else if (alg.equals("shellSort")) shellSort(arr);
+        switch (alg) {
+            case "bubbleSort":
+                bubbleSort(arr);
+                break;
+            case "insertSort":
+                insertSort(arr);
+                break;
+            case "shellSort":
+                shellSort(arr);
+                break;
+        }
         callTime = System.currentTimeMillis() - callTime;
         return callTime*1.0/1000;
     }
