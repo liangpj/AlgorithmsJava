@@ -70,7 +70,6 @@ public class FixedCapacityStack<Item> implements Iterable<Item>{
         if (N > 0 && N == a.length / 4) resize(a.length/2);
         return item;
     }
-
     @Override
     public Iterator<Item> iterator() {
         return new Iterator<Item>() {
