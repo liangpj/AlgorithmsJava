@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="23d8383f-9a84-44a2-9845-9845a95bbebe" name="Default" comment="workspace" />
     <list id="bf23337f-1c19-4fef-98c4-76e133997304" name="基本数据结构" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BaseAlg/LinkList.java" afterPath="$PROJECT_DIR$/src/BaseAlg/LinkList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BaseAlg/Queue.java" afterPath="$PROJECT_DIR$/src/BaseAlg/Queue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BaseAlg/Stack.java" afterPath="$PROJECT_DIR$/src/BaseAlg/Stack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -81,8 +80,8 @@
       <file leaf-file-name="Stack.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BaseAlg/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7920792">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.04950495">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -677,7 +676,7 @@
       <workItem from="1447130964831" duration="1382000" />
       <workItem from="1447154250669" duration="612000" />
       <workItem from="1447244992872" duration="37000" />
-      <workItem from="1447245195804" duration="1456000" />
+      <workItem from="1447245195804" duration="1516000" />
     </task>
     <task id="LOCAL-00001" summary="简单排序算法">
       <created>1447134822363</created>
@@ -721,11 +720,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447246570369</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="链表">
+      <created>1447246743001</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1447246743001</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52262000" />
+    <option name="totallyTimeSpent" value="52322000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -779,7 +784,8 @@
     <MESSAGE value="排序算法" />
     <MESSAGE value="workspace" />
     <MESSAGE value="基本数据结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="基本数据结构" />
+    <MESSAGE value="链表" />
+    <option name="LAST_COMMIT_MESSAGE" value="链表" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -892,8 +898,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/BaseAlg/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7920792">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.04950495">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
