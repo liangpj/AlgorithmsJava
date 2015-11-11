@@ -4,7 +4,6 @@ import java.util.Iterator;
 import static java.lang.System.out;
 
 public class LinkList<Item> implements Iterable<Item>{
-
     /**
      * 定义一个嵌套类来表示抽象数据类型
      */
