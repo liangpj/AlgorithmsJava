@@ -5,7 +5,6 @@ import java.util.Scanner;
 import static java.lang.System.out;
 
 public class Stack<Item> implements Iterable<Item>{
-
     private class Node {
         Item item;
         Node next;
