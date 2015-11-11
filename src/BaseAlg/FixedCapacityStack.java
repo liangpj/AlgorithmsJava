@@ -71,8 +71,6 @@ public class FixedCapacityStack<Item> implements Iterable<Item>{
         return item;
     }
 
-
-
     @Override
     public Iterator<Item> iterator() {
         return new Iterator<Item>() {
