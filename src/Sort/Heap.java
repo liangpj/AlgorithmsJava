@@ -1,5 +1,6 @@
 package Sort;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Random;
 
@@ -8,7 +9,7 @@ import static java.lang.System.out;
 /**
  * 堆
  */
-public class Heap<T extends Comparable> {
+public class Heap<T extends Comparable<T>> {
 
     private T [] arr;
     private int N = 0;
@@ -24,7 +25,7 @@ public class Heap<T extends Comparable> {
      * 创建一个默认大小的堆，默认为最小堆
      */
     public Heap() {
-        arr = (T[]) new Comparator[20];
+        arr = (T[]) new Comparable[20];
     }
 
     /**
@@ -33,7 +34,7 @@ public class Heap<T extends Comparable> {
      * @param cap 初始容量
      */
     public Heap(int cap) {
-        arr = (T[]) new Object[cap];
+        arr = (T[]) new Comparable[cap];
     }
 
     /**
@@ -42,6 +43,7 @@ public class Heap<T extends Comparable> {
      * @param comparator
      */
     public Heap(Comparator comparator) {
+        this();
         this.comparator = comparator;
     }
 
@@ -60,7 +62,7 @@ public class Heap<T extends Comparable> {
      * @param max 堆的大小
      */
     private void resize(int max) {
-        T[] tmp = (T[]) new Object[max];
+        T[] tmp = (T[]) new Comparable[max];
         // 将数组中的元素拷贝到数组tmp上去
         System.arraycopy(arr, 0, tmp, 0, N);
         arr = tmp;
@@ -132,14 +134,31 @@ public class Heap<T extends Comparable> {
                         (comparator==null && arr[parent].compareTo(arr[ch]) > 0)) {
                     swap(arr, parent, ch);
                     parent = ch;
-                }
+                } else
+                    break;
             }
         }
         return elem;
     }
     public static void main(String [] args) {
-        Heap<Integer> heap = new Heap<>();
+        // 创建一个最大堆
+        Heap<Integer> heap = new Heap<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer a, Integer b) {
+                return Integer.compare(b, a);
+            }
+        });
+
+        int [] arr = new int[30];
         Random random = new Random();
-        out.println(random.nextInt());
+        for (int i = 0; i < arr.length; ++i) {
+            arr[i] = random.nextInt(50);
+            heap.insert(arr[i]);
+        }
+        Arrays.sort(arr);
+
+        out.println(Arrays.toString(arr));
+        while (!heap.isEmpty())
+            out.print(heap.deleteFirst() + " ");
     }
 }
