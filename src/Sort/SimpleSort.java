@@ -1,4 +1,6 @@
 package Sort;
+
+import Sort.HeapSort.*;
 import java.util.*;
 import static java.lang.System.out;
 
@@ -165,7 +167,6 @@ public class SimpleSort {
         out.println("shell sort : " + time("shellSort") + "s");
         out.println("insert sort : " + time("insertSort") + "s");
         out.println("bubble sort: " + time("bubbleSort") + "s");
-
     }
 }
 
