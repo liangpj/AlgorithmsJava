@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23d8383f-9a84-44a2-9845-9845a95bbebe" name="Default" comment="Java算法">
+    <list default="true" id="23d8383f-9a84-44a2-9845-9845a95bbebe" name="Default" comment="java 算法">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AlgorithmsJava/BaseAlg/FixedCapacityStack$1.class" afterPath="$PROJECT_DIR$/out/production/AlgorithmsJava/BaseAlg/FixedCapacityStack$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AlgorithmsJava/BaseAlg/FixedCapacityStack.class" afterPath="$PROJECT_DIR$/out/production/AlgorithmsJava/BaseAlg/FixedCapacityStack.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -47,8 +47,8 @@
       <file leaf-file-name="HeapSort.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Sort/HeapSort.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6666667">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,8 +97,8 @@
         <option value="$PROJECT_DIR$/src/SimpleSort/Sort.java" />
         <option value="$PROJECT_DIR$/src/BaseAlg/FixedCapacityStack.java" />
         <option value="$PROJECT_DIR$/src/Sort/Heap.java" />
-        <option value="$PROJECT_DIR$/src/Sort/HeapSort.java" />
         <option value="$PROJECT_DIR$/src/Sort/SimpleSort.java" />
+        <option value="$PROJECT_DIR$/src/Sort/HeapSort.java" />
       </list>
     </option>
   </component>
@@ -245,7 +245,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="D:/Git/bin/git.exe" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="131" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
@@ -673,7 +673,7 @@
       <workItem from="1447247176495" duration="8051000" />
       <workItem from="1447301880274" duration="80000" />
       <workItem from="1447303112261" duration="1596000" />
-      <workItem from="1447314386555" duration="6769000" />
+      <workItem from="1447314386555" duration="6854000" />
     </task>
     <task id="LOCAL-00001" summary="简单排序算法">
       <created>1447134822363</created>
@@ -717,11 +717,17 @@
       <option name="project" value="LOCAL" />
       <updated>1447323395337</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="java 算法">
+      <created>1447323424784</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1447323424784</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68334000" />
+    <option name="totallyTimeSpent" value="68419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -776,7 +782,8 @@
     <MESSAGE value="堆数据结构" />
     <MESSAGE value="堆排序" />
     <MESSAGE value="简单排序算法" />
-    <option name="LAST_COMMIT_MESSAGE" value="简单排序算法" />
+    <MESSAGE value="java 算法" />
+    <option name="LAST_COMMIT_MESSAGE" value="java 算法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -963,8 +970,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sort/HeapSort.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
