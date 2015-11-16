@@ -1,6 +1,5 @@
 package Sort;
 
-import Sort.HeapSort.*;
 import java.util.*;
 import static java.lang.System.out;
 
