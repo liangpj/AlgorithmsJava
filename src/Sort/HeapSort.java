@@ -3,7 +3,6 @@ package Sort;
 
 import java.util.Arrays;
 import java.util.Random;
-
 import static java.lang.System.out;
 
 /**
@@ -60,14 +59,13 @@ public class HeapSort {
     }
 
     public static void main(String [] args) {
-        Integer [] arr = new Integer[100000];// {3,5,4,2,7,9,8,1,6};
+        Integer [] arr = new Integer[100];
         ///buildHeap(arr, arr.length-1);
         Random random = new Random();
         for(int i = 0; i < arr.length; ++i)
-            arr[i] = random.nextInt();
-        long callTime = System.currentTimeMillis();
+            arr[i] = random.nextInt(200);
         sort(arr);
-        callTime = System.currentTimeMillis() - callTime;
-        System.out.println("times : " + callTime/1000 + "s");
+        out.println(Arrays.toString(arr));
+
     }
 }
