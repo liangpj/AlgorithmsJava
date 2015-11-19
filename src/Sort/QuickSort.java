@@ -15,22 +15,19 @@ public class QuickSort {
         arr[j] = tmp;
     }
 
-    // 选择arr[low] arr[hig] arr[mid]的中位数作为主元, 并且把主元赋值给arr[hig-1]
+    // 选择arr[low] arr[hig] arr[mid]的中位数作为主元, 并且arr[hig]调整为主元
     private static void adjustPivot(Comparable [] arr, int low, int hig) {
-        int mid = low + (hig - low) / 2;
-        int tmp = 0;
+
+        int mid = (low + hig) / 2;
 
         if (arr[low].compareTo(arr[mid]) > 0)
             swap(arr, low, mid);
-
-        if (arr[hig].compareTo(arr[mid]) < 0)
-            swap(arr, hig, mid);
-
-        if (arr[low].compareTo(hig) > 0)
+        if (arr[low].compareTo(arr[hig]) > 0)
             swap(arr, low, hig);
+        if (arr[mid].compareTo(arr[hig]) > 0)
+            swap(arr, mid, hig);
 
-        //swap(arr, mid, hig);
-        swap(arr, mid, hig-1);
+        swap(arr, mid, hig);
     }
 
     /**
@@ -40,17 +37,16 @@ public class QuickSort {
      * @param endIndex  要排序的结束位置
      */
     public static void quickSort(Comparable [] arr, int fromIndex, int endIndex) {
-
         if (endIndex <= fromIndex)
             return;
 
-        // 调整主元，即将arr[endIndex]调整为arr{fromIndex, midIndex, endIndex}的中位数
         adjustPivot(arr, fromIndex, endIndex);
-        int pivot = endIndex-1;
+        int pivot = endIndex;
         int left = fromIndex-1, right = endIndex+1;
         while (true) {
             while (arr[++left].compareTo(arr[pivot]) < 0) ;
             while (arr[--right].compareTo(arr[pivot]) > 0) ;
+
             if (left < right)
                 swap(arr, left, right);
             else
@@ -59,7 +55,7 @@ public class QuickSort {
         swap(arr, left, pivot);
 
         quickSort(arr, fromIndex, left-1);
-        quickSort(arr, left+1,  endIndex);
+        quickSort(arr, left+1, endIndex);
     }
 
     /**
@@ -125,25 +121,21 @@ public class QuickSort {
 
     public static void sort(Comparable [] arr, int fromIndex, int endIndex) {
 
-        // 如果数组中的元素大于100，使用快速排序
         if (endIndex - fromIndex >= CUTOFF) {
 
             adjustPivot(arr, fromIndex, endIndex);
-            Comparable pivot = arr[endIndex-1];
-            int left = fromIndex-1, right = endIndex+1;
-            while (true) {
-                while (arr[++left].compareTo(pivot) < 0)  ;
-                while (arr[--right].compareTo(pivot) > 0) ;
-
-                if (left < right)
-                    swap(arr, left, right);
-                else
-                    break;
+            Comparable pivot = arr[endIndex];
+            int i = fromIndex-1, j = fromIndex;
+            for (; j <= endIndex-1; ++j) {
+                if (arr[j].compareTo(pivot) < 0) {
+                    i++;
+                    swap(arr, i, j);
+                }
             }
-            swap(arr, left, endIndex-1);
+            swap(arr, i+1, j);
 
-            sort(arr, fromIndex, left - 1);
-            sort(arr, left + 1, endIndex);
+            sort(arr, fromIndex, i);
+            sort(arr, i + 2, endIndex);
         } else {
             shellSort(arr, fromIndex, endIndex);
         }
